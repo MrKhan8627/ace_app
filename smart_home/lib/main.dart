@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sweet_home/screens/first_screen.dart';
+import 'screens/first_screen.dart';
+
 
 void main() {
   runApp(MyApp());

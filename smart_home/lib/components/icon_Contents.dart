@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-
-const kLableTextStyle = TextStyle(
-    fontSize: 12, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold);
-
+import 'package:smart_home/components/constants.dart';
 
 class IconContents extends StatelessWidget {
-  IconContents({required this.icon,required this.lable});
+  IconContents({this.icon, this.lable});
   final IconData icon;
   final String lable;
 

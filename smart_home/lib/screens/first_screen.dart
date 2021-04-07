@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:sweet_home/components/custom_appBar.dart';
-import 'package:sweet_home/components/icon_Contents.dart';
-import 'package:sweet_home/components/resuable_card.dart';
-
-const kTitleTextStyle = TextStyle(fontSize: 20, color: Colors.black87);
-const kCardTitleTextStyle = TextStyle(
-    fontSize: 12, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold);
+import 'package:smart_home/components/camera_card.dart';
+import 'package:smart_home/components/constants.dart';
+import 'package:smart_home/components/custom_appBar.dart';
+import 'package:smart_home/components/icon_Contents.dart';
+import 'package:smart_home/components/resuable_card.dart';
+import 'package:smart_home/screens/second_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -39,6 +38,12 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       Expanded(
                           child: ReusableCard(
+                        onPress: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => LightPage()));
+                        },
                         cardchild: IconContents(
                           icon: FontAwesomeIcons.lightbulb,
                           lable: 'Lamp',
@@ -122,21 +127,6 @@ class _HomePageState extends State<HomePage> {
           ],
         )),
       ),
-    );
-  }
-}
-
-class CameraCard extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        color: Colors.amberAccent,
-        borderRadius: BorderRadius.circular(10)
-      ),
-      height: 100,
-      width: 200,
     );
   }
 }
